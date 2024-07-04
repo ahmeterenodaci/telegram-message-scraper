@@ -1,0 +1,14 @@
+{
+  "name": "jstelegramscraper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "sanitize-html": "^2.13.0"
+  }
+}
