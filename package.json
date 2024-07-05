@@ -1,7 +1,7 @@
 {
   "name": "@erenodaci/telegram-message-scraper",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
