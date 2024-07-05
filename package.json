@@ -1,7 +1,7 @@
 {
-  "name": "telegram-message-scraper",
+  "name": "@erenodaci/telegram-message-scraper",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -14,6 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmeterenodaci/telegram-message-scraper.git"
-  }
+    "url": "git+https://github.com/ahmeterenodaci/telegram-message-scraper.git"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "telegram",
+    "scraper",
+    "message"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahmeterenodaci/telegram-message-scraper/issues"
+  },
+  "homepage": "https://github.com/ahmeterenodaci/telegram-message-scraper#readme"
 }
