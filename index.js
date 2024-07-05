@@ -32,6 +32,10 @@ export async function TelegramMessageScraper(channelName) {
          /<div class="tgme_widget_message_text js-message_text" dir="auto">(.*?)<\/div>/g;
       return cleanText(regex.exec(html)?.[1]);
    }
+   function getViews(html) {
+      const regex = /<span class="tgme_widget_message_views">(.*?)<\/span>/g;
+      return regex.exec(html)?.[1];
+   }
    async function getChannelMessages(channelName) {
       const url = `https://t.me/s/${channelName}`;
       const result = await fetch(url);
@@ -52,6 +56,7 @@ export async function TelegramMessageScraper(channelName) {
             date: getMessageDate(message),
             message: getMessage(message),
             image: getImage(message),
+            views: getViews(message),
          });
       });
       return messages;
