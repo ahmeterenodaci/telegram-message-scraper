@@ -23,6 +23,7 @@ jobs:
            env:
               NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
            run: |
+              git status
               git config --global user.email "ahmeterenodaci@gmail.com"
               git config --global user.name "Ahmet Eren Odacı"
               git add . && git commit
