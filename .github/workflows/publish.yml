@@ -14,18 +14,27 @@ jobs:
          - name: Set up Node.js
            uses: actions/setup-node@v2
            with:
-              node-version: "14"
+              node-version: "20" # Node.js sürümü 20 olarak belirlendi
 
          - name: Install dependencies
            run: npm install
+
+         - name: Run tests
+           run: npm test
+
+         - name: Check git status
+           run: git status
+
+         - name: Commit changes
+           run: |
+              git config --global user.email "you@example.com"
+              git config --global user.name "Your Name"
+              git add .
+              git commit -m "chore: update version"
 
          - name: Bump version and publish to npm
            env:
               NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
            run: |
-              git status
-              git config --global user.email "ahmeterenodaci@gmail.com"
-              git config --global user.name "Ahmet Eren Odacı"
-              git add . && git commit
               npm version patch -m "Bump version to %s"
               npm publish --access public
