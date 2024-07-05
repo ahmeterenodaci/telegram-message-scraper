@@ -1,14 +1,19 @@
 {
-  "name": "jstelegramscraper",
+  "name": "telegram-message-scraper",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Ahmet Eren Odacı <ahmeterenodaci@gmail.com>",
   "license": "MIT",
-  "description": "",
+  "description": "Designed for extracting and processing message data from Telegram channels. It utilizes web scraping techniques to fetch HTML content from a specified Telegram channel and parses relevant information such as message text, sender details, timestamps, and associated media.",
   "dependencies": {
     "sanitize-html": "^2.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmeterenodaci/telegram-message-scraper.git"
   }
 }
